@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="game">
+    <div class="lead">
+      <span>{{ flags }} <fa-icon [icon]="faFlag"></fa-icon></span>
+      <span>{{ uncovered }}/{{ rows * cols - bombCount }}</span>
+    </div>
+    <table>
+      <tr *ngFor="let row of cells">
+        <td
+          *ngFor="let cell of row"
+          [@uncover]="cell.isCovered ? 'covered' : 'uncovered'"
+          (click)="uncover(cell)"
+          (contextmenu)="flag(cell)"
+          (dblclick)="doubleClick(cell)"
+        >
+          <span *ngIf="cell.isFlagged" class="flag"
+            ><fa-icon [icon]="faFlag"></fa-icon
+          ></span>
+          <span *ngIf="cell.isBomb && !cell.isCovered"
+            ><fa-icon [icon]="faBomb"></fa-icon
+          ></span>
+          <span
+            *ngIf="!cell.isBomb && cell.bombsTouching > 0 && !cell.isCovered"
+            class="touching-{{ cell.bombsTouching }}"
+            [style.color]="colors[cell.bombsTouching - 1]"
+            >{{ cell.bombsTouching }}</span
+          >
+        </td>
+      </tr>
+    </table>
+    <!-- <div *ngFor="let _ of [].constructor(8); let i = index">
+      <input type="color" [(ngModel)]="colors[i]" style="display: block;" />
+    </div> -->
+  </div>
+</div>

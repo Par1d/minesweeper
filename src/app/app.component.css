@@ -1,0 +1,51 @@
+table {
+  border-collapse: collapse;
+}
+
+.game {
+  display: inline-block;
+  text-align: right;
+}
+
+.lead {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+  border: 1px solid #8e44ad;
+}
+
+.lead span:first-child {
+  padding: 10px;
+  background: #8e44ad;
+  display: inline-block;
+  color: #fff;
+}
+
+.lead span:last-child {
+  padding: 10px;
+}
+
+.container {
+  background: #ecf0f1;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  width: 960px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+td {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #3c3c3c;
+  text-align: center;
+  user-select: none;
+  font-weight: 700;
+}
+
+.flag {
+  color: #ecf0f1;
+}
