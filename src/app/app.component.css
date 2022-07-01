@@ -4,7 +4,6 @@ table {
 
 .game {
   display: inline-block;
-  text-align: right;
 }
 
 .lead {
@@ -27,14 +26,8 @@ table {
 }
 
 .container {
-  background: #ecf0f1;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-  width: 960px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 50px 20px;
-  border-radius: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 td {
@@ -48,4 +41,9 @@ td {
 
 .flag {
   color: #ecf0f1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }

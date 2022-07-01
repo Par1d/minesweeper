@@ -1,15 +1,6 @@
 /* Add application styles & imports to this file! */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background: linear-gradient(135deg, rgba(34, 40, 49, 1) 0%, #3498db);
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
 }

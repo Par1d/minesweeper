@@ -1,0 +1,13 @@
+<div>
+  <select [(ngModel)]="difficulty">
+    <option>Beginner</option>
+    <option>Advanced</option>
+    <option>Expert</option>
+    <option>Custom</option>
+  </select>
+  <button (click)="newGameClicked()">New Game</button>
+  <br />
+  <input *ngIf="difficulty === 'Custom'" />
+  <input *ngIf="difficulty === 'Custom'" />
+  <input *ngIf="difficulty === 'Custom'" />
+</div>

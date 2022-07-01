@@ -1,8 +1,11 @@
 <div class="container">
   <div class="game">
-    <div class="lead">
-      <span>{{ flags }} <fa-icon [icon]="faFlag"></fa-icon></span>
-      <span>{{ uncovered }}/{{ rows * cols - bombCount }}</span>
+    <div class="header">
+      <app-difficulty-selector></app-difficulty-selector>
+      <div class="lead">
+        <span>{{ flags }} <fa-icon [icon]="faFlag"></fa-icon></span>
+        <span>{{ uncovered }}/{{ rows * cols - bombCount }}</span>
+      </div>
     </div>
     <table>
       <tr *ngFor="let row of cells">
